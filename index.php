@@ -41,6 +41,13 @@ while($i < count($products)){
 	<title>my first PHP file</title>
 </head>
 <body>
+        <h1> Products </h1>
+        <ul>
+            <?php foreach($products as $product) { ?>
+                <h3><?php echo $product["name"];?></h3>
+                <p>$ <?php echo $product["price"];?></p>
+                <?php } ?>
+        </ul>
 	
 </body>
 </html>
