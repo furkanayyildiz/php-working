@@ -1,52 +1,38 @@
 <?php 
 
-    // indexed arrays
-	$peopleOne = ["Ahmet","Ali","Veli"];
-    $peopleTwo = array("Burcu","Buse");
+$ninjas = ['shaun', 'ryu', 'yoshi'];
 
-    //echo $peopleOne[1]; // printing index of array
-    $ages = [10, 20, 30, 40];
-    $ages[1] = 25; // changing element value
+// for($i = 0; $i < count($ninjas); $i++){
+// 	echo $ninjas[$i] . '<br />';
+// }
 
-    //adding new element which is exting array
-    $ages[] = 50;
-    array_push($ages, 60);
-    //print_r($ages);
-    //echo count($ages);
+// foreach($ninjas as $ninja){
+// 	echo $ninja . ' <br/>';
+// }
 
-    //sorting 2 array into array
-    $peopleThree = array_merge($peopleOne, $peopleTwo);
-    //print_r($peopleThree);
+$products = [
+    ['name' => 'shiny star', 'price' => 20],
+    ['name' => 'green shell', 'price' => 10],
+    ['name' => 'red shell', 'price' => 15],
+    ['name' => 'gold coin', 'price' => 5],
+    ['name' => 'lightning bolt', 'price' => 40],
+    ['name' => 'banana skin', 'price' => 2]
+];
 
-    // Associative array (key & value pairs)
+// foreach($products as $product){
+// 	echo $product['name'] .' - '. $product['price'];
+// 	echo '<br />';
+// }
 
-    $fruitOne = [ "apple" => "red", "orange" => "orange", "kiwi" => "green"];
-    $fruitTwo = array("lemon" => "yellow", "strawberry" => "pink");
-    echo $fruitOne["kiwi"];
-    print_r($fruitTwo);
+$i = 0;
 
-    foreach($fruitOne as $x => $x_value) {
-        echo "My Favorite fruit is " . $x . " and color is that " . $x_value ;
-        echo "<br>";
-    }
+while($i < count($products)){
+    echo $products[$i]['name'];
+    echo '<br />';
+    $i++;
+}
 
-    // multi-dimensinal arrays
-    $blogs = [
-		['title' => 'mario party', 'author' => 'mario', 'content' => 'lorem'],
-		['title' => 'mariokart cheats', 'author' => 'toad', 'content' => 'lorem'],
-		['title' => 'zelda hidden chests', 'author' => 'link', 'content' => 'lorem']
-	];
 
-	//print_r($blogs);
-	//print_r($blogs[2]);
-	//echo $blogs[1]['title'];
-	//echo count($blogs);
-
-	$blogs[] = ['title' => 'castle party', 'author' => 'peach', 'content' => 'lorem'];
-	//print_r($blogs);
-
-	$popped = array_pop($blogs);
-	//print_r($popped);
 ?>
 
 <!DOCTYPE html>
