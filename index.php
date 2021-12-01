@@ -25,6 +25,28 @@
     echo $fruitOne["kiwi"];
     print_r($fruitTwo);
 
+    foreach($fruitOne as $x => $x_value) {
+        echo "My Favorite fruit is " . $x . " and color is that " . $x_value ;
+        echo "<br>";
+    }
+
+    // multi-dimensinal arrays
+    $blogs = [
+		['title' => 'mario party', 'author' => 'mario', 'content' => 'lorem'],
+		['title' => 'mariokart cheats', 'author' => 'toad', 'content' => 'lorem'],
+		['title' => 'zelda hidden chests', 'author' => 'link', 'content' => 'lorem']
+	];
+
+	//print_r($blogs);
+	//print_r($blogs[2]);
+	//echo $blogs[1]['title'];
+	//echo count($blogs);
+
+	$blogs[] = ['title' => 'castle party', 'author' => 'peach', 'content' => 'lorem'];
+	//print_r($blogs);
+
+	$popped = array_pop($blogs);
+	//print_r($popped);
 ?>
 
 <!DOCTYPE html>
