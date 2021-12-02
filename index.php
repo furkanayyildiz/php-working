@@ -35,7 +35,7 @@ function myTest(){
        has no return valur  --- has a retun value of 1(used expressions)
        can multiable parameters -- can take one argument
         *** echo is marginally faster than print
-    */
+    
 
     echo "<h2>PHP is Fun!</h2>";
     echo "Hello world!<br>";
@@ -49,6 +49,16 @@ function myTest(){
     print "<h2>" . $txt1 . "</h2>";
     print "Study PHP at " . $txt2 . "<br>";
     print $x + $y;
+    */
+
+    // İsim ismi fonksiyona girip orada değişiyor ve öyle çıkıyor. & kullanınca
+    $isim = "Furkan";
+    function sayHi(&$isim) {
+        $isim = "Damla";
+        echo "Hi $isim";
+    }
+    sayHi($isim);
+    echo $isim;
 ?>
 
 <!DOCTYPE html>
