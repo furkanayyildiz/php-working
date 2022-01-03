@@ -1,4 +1,5 @@
 <?php 
+    /*
                 // variables
  $number1 = 5;
  $number2 = 15;
@@ -29,7 +30,7 @@ function myTest(){
     echo "<br/>";
     myFunc();
     echo "<br/>";
-
+    */
     
     /*   echo                           print 
        has no return valur  --- has a retun value of 1(used expressions)
@@ -50,7 +51,7 @@ function myTest(){
     print "Study PHP at " . $txt2 . "<br>";
     print $x + $y;
     */
-
+    /*
     // İsim ismi fonksiyona girip orada değişiyor ve öyle çıkıyor. & kullanınca
     $isim = "Furkan";
     function sayHi(&$isim) {
@@ -59,6 +60,8 @@ function myTest(){
     }
     sayHi($isim);
     echo $isim;
+    */
+    $kullanici_id = 131;
 ?>
 
 <!DOCTYPE html>
@@ -70,6 +73,14 @@ function myTest(){
     <title>php tutorial</title>
 </head>
 <body>
-        <h1>User Profile Page</h1>
+    
+    <form action="post_get.php" method= "GET">
+        Ad <input type="text" name= "ad" placeholder="adınızı girin">
+        SoyAd <input type="text" name= "soyad" placeholder="Soyadınızı girin">
+        <input type="submit" value="formu gönder">
+    </form>
+    
+    <a href="post_get.php?kullanici_id=<?php echo $kullanici_id ?>"><button>Kullanıcıyı Sil</button></a>
+        
 </body>
 </html>
